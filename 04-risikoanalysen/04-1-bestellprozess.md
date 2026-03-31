@@ -1,0 +1,48 @@
+# 4.1 Bestellprozess Webshop
+
+### 4.1.1 Kurzbeschreibung des Prozesses
+
+Der Bestellprozess beschreibt alle Schritte von der Nutzung des Webshops durch Kundinnen und Kunden bis zur erfolgreichen Anlage und Bearbeitung einer Bestellung im internen System. Dazu gehören Warenkorbfunktionen, Zahlungsabwicklung über einen externen Zahlungsdienstleister sowie die Bestellbestätigung per E‑Mail.
+
+### 4.1.2 Ablauf (vereinfacht)
+
+1. Kunde ruft Webshop auf und legt Produkte in den Warenkorb.
+2. Kunde meldet sich an oder gibt Adress‑ und Kontaktdaten ein.
+3. Auswahl der Zahlungsart und Weiterleitung zum Zahlungsdienstleister.
+4. Zahlungsbestätigung → Bestellung wird im System angelegt.
+5. Kunde erhält Bestellbestätigung per E‑Mail.
+
+### 4.1.3 Risiken & Bewertung
+
+<div class="joplin-table-wrapper"><table data-table-width="760" data-layout="default" data-local-id="75823dff-14e1-40fc-8c90-66b239f3b3df" class="confluenceTable"><colgroup><col style="width: 94.0px;"><col style="width: 334.0px;"><col style="width: 173.0px;"><col style="width: 152.0px;"></colgroup><tbody><tr data-local-id="3ada5178fbb7"><th data-local-id="2c02beb112db" class="confluenceTh"><p local-id="9fc35b35649b"><strong>Risiko-ID</strong></p></th><th data-local-id="d62f6b9bd091" class="confluenceTh"><p local-id="b09dcfc53e7d"><strong>Beschreibung</strong></p></th><th data-local-id="23a4fddfdb5b" class="confluenceTh"><p local-id="54d5616c8d3e"><strong>Wahrscheinlichkeit</strong></p><p local-id="a2ed3b9e7e32"><strong>des Eintritts (1-5)</strong></p></th><th data-local-id="7ea87ee7418f" class="confluenceTh"><p local-id="23ebcb2891b6"><strong>Grad der</strong></p><p local-id="180cd9848b8b"><strong>Auswirkung (1-5)</strong></p></th></tr><tr data-local-id="0c7ce4e58a74"><td data-local-id="100996f2c838" class="confluenceTd"><p local-id="e24af114e3ff">R1</p></td><td data-local-id="812c97bf4999" class="confluenceTd"><p local-id="3707675ac794"><span class="inline-comment-marker" data-ref="35ea93c0-6d24-493d-a9f4-515545da5348"><span class="inline-comment-marker" data-ref="8b27f35d-0cdd-4385-a6b4-6301b829cb8d">Ausfall des Webshops während Hauptverkaufszeiten</span></span></p><div class="expand-container conf-macro output-block" data-hasbody="true" data-local-id="fd2ef645523b" data-macro-id="06700845-44d4-48ba-8101-6a381062f188" data-macro-name="expand" id="expander-230914746"><div id="expander-control-230914746" class="expand-control"><span class="expand-control-icon icon">&nbsp;</span><span class="expand-control-text">Ursache/Auswirkung/best. Maßnahmen</span></div><div id="expander-content-230914746" class="expand-content expand-hidden"><ul local-id="c4e5b203-e813-48a3-8cf0-980285a1b921"><li local-id="ab56303c-0efc-44fa-930e-29304039dc11"><p local-id="df0a71cc1c11">Ursache: Technischer Fehler beim Hoster, fehlerhaftes Update, Überlastung</p></li><li local-id="03080361-0491-4e15-8aeb-2c82e82a5616"><p local-id="dc9d8bfec2e9">Auswirkung: Umsatzverlust, Image‑Schaden, Supportanfragen steigen</p></li><li local-id="5b00f4a5-bef4-4a91-b496-019bae95fd49"><p local-id="1c8f382e7dc2">Bestehende Maßnahmen: Hosting mit SLA, Monitoring, Staging‑System</p></li></ul></div></div></td><td data-local-id="8d33f624c2a4" class="confluenceTd"><p local-id="10c1e6d67d2e">3</p></td><td data-local-id="3598c5ce8548" class="confluenceTd"><p local-id="f79fc4a248c4">5</p></td></tr><tr data-local-id="0caef2dde34d"><td data-local-id="fd795d2851e5" class="confluenceTd"><p local-id="c1144c6764e2">R2</p></td><td data-local-id="4ef5c5f5dc52" class="confluenceTd"><p local-id="aa153a8b739d"><span class="inline-comment-marker" data-ref="d2a83ce0-4b76-4c5b-9951-5d4a823dd065">Kompromittierung von Kundenkonten durch schwache Passwörter</span></p><div class="expand-container conf-macro output-block" data-hasbody="true" data-local-id="08c2ddebcf52" data-macro-id="137b1841-1d3d-4637-afb3-cc7ff877594d" data-macro-name="expand" id="expander-432068964"><div id="expander-control-432068964" class="expand-control"><span class="expand-control-icon icon">&nbsp;</span><span class="expand-control-text">Ursache/Auswirkung/best. Maßnahmen</span></div><div id="expander-content-432068964" class="expand-content expand-hidden"><p local-id="32481a1f1236">Ursache: Benutzer wählen einfache oder wiederverwendete Passwörter; kein verpflichtender Einsatz von MFA; unzureichende Passwort‑Richtlinien im Webshop.<br></p><p local-id="d0eb647cb988">Auswirkung: Unautorisierte Bestellungen, Einsicht in personenbezogene Daten, potenzielle DSGVO‑Incidents und Vertrauensverlust bei Kundinnen und Kunden.<br></p><p local-id="9e79568373e8">Bestehende Maßnahmen: Mindestanforderungen an Passwortlänge, Rate‑Limiting bei Login‑Versuchen, Sperrung nach mehreren Fehlversuchen, grundlegende Passwort‑Hinweise im Frontend</p></div></div></td><td data-local-id="5e442983cc3a" class="confluenceTd"><p local-id="fad81bc841ed">3</p></td><td data-local-id="ff7cd5044744" class="confluenceTd"><p local-id="bca2b1558008">4</p></td></tr><tr data-local-id="a165a88fb8b3"><td data-local-id="8f4fd5c76358" class="confluenceTd"><p local-id="de4203a4517a">R3</p></td><td data-local-id="6f16e9c0d692" class="confluenceTd"><p local-id="0d4b1b584ffd"><span class="inline-comment-marker" data-ref="920fb62d-d2f3-411f-9d07-d970750bba9a">Manipulation von Bestelldaten auf dem Transportweg</span></p><div class="expand-container conf-macro output-block" data-hasbody="true" data-local-id="9e9b25f6b2a3" data-macro-id="6f57042e-30e1-459b-a7a9-b2cd7cbec183" data-macro-name="expand" id="expander-90822101"><div id="expander-control-90822101" class="expand-control"><span class="expand-control-icon icon">&nbsp;</span><span class="expand-control-text">Ursache/Auswirkung/best. Maßnahmen</span></div><div id="expander-content-90822101" class="expand-content expand-hidden"><p local-id="4bc04c266022">Ursache: Fehlende oder falsch konfigurierte TLS‑Verschlüsselung, veraltete Protokolle/Zertifikate, unsichere Weiterleitungen.<br></p><p local-id="5b7b6dfc432e">Auswirkung: Verfälschte Bestell‑ oder Kundendaten, möglichen Datenabfluss, rechtliche Risiken durch Verlust der Datenintegrität.<br></p><p local-id="d474d3b23370">Bestehende Maßnahmen: Einsatz aktueller TLS‑Zertifikate, erzwungene HTTPS‑Weiterleitung, regelmäßige Zertifikats‑Erneuerung und technische Überprüfung der SSL/TLS‑Konfiguration.</p></div></div></td><td data-local-id="0a9748f8101c" class="confluenceTd"><p local-id="b4ed802ece0a">2</p></td><td data-local-id="37f3b44e0815" class="confluenceTd"><p local-id="543345b02951">5</p></td></tr><tr data-local-id="11114a18adbc"><td data-local-id="ca69190fa530" class="confluenceTd"><p local-id="c956bb38bcb4">R4</p><p local-id="228db5bd5e54"></p><p local-id="b2bb7ab8efa7"></p></td><td data-local-id="a4c2d9fe2acb" class="confluenceTd"><p local-id="203292920896"><span class="inline-comment-marker" data-ref="5ee96af8-2349-4237-b6c1-da743fa4a783">Fehlbuchungen durch Fehler im Zahlungs‑Redirect</span></p><div class="expand-container conf-macro output-block" data-hasbody="true" data-local-id="4eb2cc7afbc9" data-macro-id="a3d4e127-d62f-4de6-ad6c-33c6b4cfb4af" data-macro-name="expand" id="expander-2103622882"><div id="expander-control-2103622882" class="expand-control"><span class="expand-control-icon icon">&nbsp;</span><span class="expand-control-text">Ursache/Auswirkung/best. Maßnahmen</span></div><div id="expander-content-2103622882" class="expand-content expand-hidden"><p local-id="add939ca0dfd">Ursache: Fehlkonfiguration oder Instabilität der Schnittstelle zum Zahlungsdienstleister, Timeouts oder fehlende Rückbestätigungen bei Transaktionen.</p><p local-id="3abfba785245"><br>Auswirkung: Bestellungen ohne verbuchte Zahlung, doppelte Belastungen, Abstimmungsprobleme in der Buchhaltung und erhöhte Reklamations‑/Supportaufwände.<br></p><p local-id="6fe37190141e">Bestehende Maßnahmen: Technische Tests der Zahlungsstrecke vor Releases, Logging von Transaktionen und Rückmeldungen, definierte Klärungsprozesse mit dem Zahlungsdienstleister.</p></div></div></td><td data-local-id="c0483fa229d2" class="confluenceTd"><p local-id="692332f0f70d">2</p></td><td data-local-id="c0d76c576851" class="confluenceTd"><p local-id="db1284c8a671">4</p></td></tr></tbody></table></div>
+
+### 4.1.4 Visualisierte Risk-Matrix
+
+```mermaid
+flowchart LR
+    classDef axis fill:#f0f0f0,stroke:#000,color:#000;
+    classDef low fill:#d0f0d0,stroke:#000,color:#000;
+    classDef medium fill:#fff0c0,stroke:#000,color:#000;
+    classDef high fill:#f06060,stroke:#000,color:#000;
+
+    %% Y-Achse (Wahrscheinlichkeit)
+    Y3["Hoch"]:::axis
+    Y2["Mittel"]:::axis
+    Y1["Niedrig"]:::axis
+
+    %% X-Achse (Auswirkung)
+    H0["Eintrittswahrscheinlichkeit (Y) / Auswirkung (X)"]:::axis
+    H0 --- X1["Gering"]:::axis --- X2["Mittel"]:::axis --- X3["Hoch"]:::axis
+
+    %% Zeile Niedrig (Wahrscheinlichkeit niedrig)
+    Y1 --- R11[" "]:::low --- R12["R3"]:::medium --- R13[" "]:::medium
+
+    %% Zeile Mittel (Wahrscheinlichkeit mittel)
+    Y2 --- R21[" "]:::low --- R22[" "]:::medium --- R23["R1"]:::high
+
+    %% Zeile Hoch (Wahrscheinlichkeit hoch)
+    Y3 --- R31[" "]:::medium --- R32["R2"]:::high --- R33[" "]:::high
+```
+
+**Ergebnis der Risikoanalyse Bestellprozess:**  
+Die höchsten Risiken sind R1 (Webshop‑Ausfall) und R2 (Kontenkompromittierung) mit Risikowerten 15 und 12. Diese werden im Maßnahmenplan vorrangig behandelt. Die Matrix zeigt, dass Verfügbarkeit und Kundensicherheit die kritischsten Bereiche sind.
